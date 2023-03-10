@@ -102,8 +102,8 @@ static deleteRoom(houseId,roomId){
       this.houses = houses;
       $('#app').empty();
       for(let house of houses){
-        $('#app').prepend(
-            `<div id="${house._id}" class="card">
+        $('#app').prepend(`
+            <div id="${house._id}" class="card">
                 <div class="card-header">
                     <h2>${house.name}</h2>
                     <button class="btn btn-danger" onclick="DOMManager.deleteHouse('${house._id}')">Delete</button>
